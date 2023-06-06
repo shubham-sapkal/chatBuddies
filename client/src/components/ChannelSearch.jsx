@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useChatContext } from 'stream-chat-react';
 
-import { ResultsDropdown } from './'
+import { ResultsDropdown } from './';
 import { SearchIcon } from '../assets';
 
 const ChannelSearch = ({ setToggleContainer }) => {
@@ -35,6 +35,7 @@ const ChannelSearch = ({ setToggleContainer }) => {
             if(channels.length) setTeamChannels(channels);
             if(users.length) setDirectChannels(users);
         } catch (error) {
+            console.log("Query Error!")
             setQuery('')
         }
     }
